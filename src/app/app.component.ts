@@ -7,7 +7,8 @@ import {GridPage} from "../pages/grid/grid";
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  
 })
 export class MyApp {
   public pages: Array<any>;

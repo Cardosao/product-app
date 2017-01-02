@@ -1,15 +1,6 @@
-<ion-header>
-  <ion-navbar>
-    <button menuToggle ion-button icon-only>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Ionic Blank</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-tabs selectedIndex="2" color="blue-ps"> 
+    <ion-tab tabIcon="bookmarks" tabTitle="Produtos" [root]="productPage"></ion-tab>
+    <ion-tab tabIcon="pricetags" tabTitle="Categorias" [root]="categoryPage"></ion-tab>
+  </ion-tabs>
 </ion-content>

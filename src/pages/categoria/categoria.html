@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Categorias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let c of categories" nopadding>
+    <ion-item-sliding nopadding>
+      <ion-item>
+        <ion-row >
+          <ion-col width-10>{{ c.id }}</ion-col>
+          <ion-col>{{ c.nome }}</ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item-options>
+        <button color="primary" ion-button icon-only>
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button color="danger" ion-button icon-only>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <button ion-fab mini color="danger">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
