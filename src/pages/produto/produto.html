@@ -1,5 +1,28 @@
 <ion-content padding>
+  <h5 padding-left>Produtos</h5>
+  <ion-list>
+    <ion-item-sliding *ngFor="let p of products">
+      <ion-item>
+        <span>{{ p.nome }}</span>
+        <span item-right>{{ p.preco | currency:'BRL':true:'1.2-2' }}</span>
+        <ion-icon name="ios-arrow-back-outline" item-right></ion-icon>
+      </ion-item>
+      <ion-item-options>
+        <button color="primary" ion-button icon-only (click)="update(p)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button color="danger" ion-button icon-only (click)="delete(p)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <div></div>
+  </ion-list>
 
-  <h2>Produtos</h2>
+  <ion-fab bottom right>
+    <button ion-fab mini color="danger" (click)="insert()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>

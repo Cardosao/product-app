@@ -33,6 +33,25 @@ $colors: (
   blue-ps:    #003791
 );
 
+.menu-top-left {
+    margin: 15px 2px !important;
+    width:  30px !important;
+    height: 30px !important;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0) !important;
+}
+
+ion-input, .paint-bottom-border {
+  border-bottom: 1px solid #387ef5;
+}
+
+div.item-inner {
+  padding-right: 0px !important;
+}
+
+.scroll-content {
+    overflow-y: hidden !important;
+}
+
 
 // App iOS Variables
 // --------------------------------------------------

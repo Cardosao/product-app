@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="blue-ps">
+    <ion-buttons right>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="ios-backspace-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <h5>Cadastro de Categoria</h5>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome da Categoria</ion-label>
+      <ion-input type="text" [(ngModel)]="categoria.nome"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block (click)="save()">SALVAR</button>
+    </div>
+  </ion-list>
+</ion-content>

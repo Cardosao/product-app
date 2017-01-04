@@ -1,5 +1,15 @@
-<ion-content>
-  <ion-tabs selectedIndex="2" color="blue-ps"> 
+<ion-header showWhen="ios" hideWhen="android">
+  <div padding showWhen="ios" hideWhen="android"></div>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab>
+    <button menuToggle ion-fab mini color="blue-ps" class="menu-top-left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-tabs selectedIndex="2" color="blue-ps">
     <ion-tab tabIcon="bookmarks" tabTitle="Produtos" [root]="productPage"></ion-tab>
     <ion-tab tabIcon="pricetags" tabTitle="Categorias" [root]="categoryPage"></ion-tab>
   </ion-tabs>

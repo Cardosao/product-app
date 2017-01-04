@@ -3,12 +3,14 @@ import { Platform, MenuController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-import {GridPage} from "../pages/grid/grid";
+import { GridPage } from "../pages/grid/grid";
+import { ProdutoPage } from "../pages/produto/produto";
+import { CategoriaPage } from "../pages/categoria/categoria";
 
 
 @Component({
   templateUrl: 'app.html',
-  
+
 })
 export class MyApp {
   public pages: Array<any>;
@@ -27,7 +29,9 @@ export class MyApp {
   private initPages() {
     this.pages = [
       {title: 'Grid', component: GridPage, icon: 'apps'},
-      {title: 'Home', component: HomePage, icon: 'home'}
+      {title: 'Home', component: HomePage, icon: 'home'},
+      {title: 'Produtos', component: ProdutoPage, icon: 'bookmarks'},
+      {title: 'Categorias', component: CategoriaPage, icon: 'pricetags'}
     ];
   }
 

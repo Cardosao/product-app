@@ -1,34 +1,26 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Categorias</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 <ion-content padding>
 
-  <ion-list *ngFor="let c of categories" nopadding>
-    <ion-item-sliding nopadding>
+  <h5 padding-left>Produtos</h5>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let c of categories">
       <ion-item>
-        <ion-row >
-          <ion-col width-10>{{ c.id }}</ion-col>
-          <ion-col>{{ c.nome }}</ion-col>
-        </ion-row>
+        {{ c.nome }}
+          <ion-icon name="ios-arrow-back-outline" item-right></ion-icon>
       </ion-item>
       <ion-item-options>
-        <button color="primary" ion-button icon-only>
+        <button color="primary" ion-button icon-only (click)="update(c)">
           <ion-icon name="create"></ion-icon>
         </button>
-        <button color="danger" ion-button icon-only>
+        <button color="danger" ion-button icon-only (click)="delete(c)">
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
     </ion-item-sliding>
+    <div></div>
   </ion-list>
-
   <ion-fab bottom right>
-    <button ion-fab mini color="danger">
+    <button ion-fab mini color="danger" (click)="insert()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>

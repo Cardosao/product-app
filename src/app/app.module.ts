@@ -5,6 +5,8 @@ import { HomePage } from '../pages/home/home';
 import { ProdutoPage } from '../pages/produto/produto';
 import { CategoriaPage } from '../pages/categoria/categoria';
 import { GridPage } from '../pages/grid/grid';
+import { CategoriaModalPage } from '../pages/categoria-modal/categoria-modal';
+import { ProdutoModalPage } from '../pages/produto-modal/produto-modal';
 
 import { CategoriaService } from '../providers/categoria-service';
 import { ProdutoService } from '../providers/produto-service';
@@ -16,9 +18,11 @@ import { ProdutoService } from '../providers/produto-service';
     GridPage,
     ProdutoPage,
     CategoriaPage,
+    CategoriaModalPage,
+    ProdutoModalPage,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'top'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -27,6 +31,8 @@ import { ProdutoService } from '../providers/produto-service';
     GridPage,
     ProdutoPage,
     CategoriaPage,
+    CategoriaModalPage,
+    ProdutoModalPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
