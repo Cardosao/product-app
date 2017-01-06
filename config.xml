@@ -5,12 +5,14 @@
   <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="tel:*" launch-external="yes"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+  <allow-intent href="*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
@@ -35,4 +37,7 @@
   <plugin name="cordova-plugin-device" spec="1.1.4"/>
   <plugin name="cordova-plugin-splashscreen" spec="~4.0.1"/>
   <allow-navigation href="http://192.168.8.2:8100"/>
+  <allow-navigation href="*"/>
+  <allow-navigation href="http://*/*"/>
+  <allow-navigation href="https://*/*"/>
 </widget>

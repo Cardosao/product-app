@@ -9,7 +9,7 @@ export class ProdutoService {
 
   constructor(public http: Http) {
     console.log('Hello ProdutoService Provider');
-    this.baseUri = 'https://product-api-cardosao.c9users.io/api/product';
+    this.baseUri = 'https://product-api-cardosao.c9users.io/api/product/';
   }
 
   public getAll() : Promise<any> {
