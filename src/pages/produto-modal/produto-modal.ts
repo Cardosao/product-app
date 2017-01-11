@@ -29,15 +29,24 @@ export class ProdutoModalPage {
     this.viewCtrl.dismiss();
   }
 
+  // private getCategorias(): void {
+  //   this.cService.getAll()
+  //     .then((categories: Array<any>) => {
+  //       this.categories = categories;
+  //     }, (error) => {
+  //       this.categories = new Array<any>();
+  //       console.log('Erro ao listar categorias', error)
+  //     });
+  // }
+
   private getCategorias(): void {
-    this.cService.getAll()
-      .then((categories: Array<any>) => {
+    this.cService.getAll().subscribe(
+      (categories: Array<any>) => {
         this.categories = categories;
       }, (error) => {
-        this.categories = new Array<any>();
         console.log('Erro ao listar categorias', error)
-      });
-
+      }
+    );
   }
 
   public save() {

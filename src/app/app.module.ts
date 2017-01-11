@@ -6,9 +6,12 @@ import { ProdutoPage } from '../pages/produto/produto';
 import { CategoriaPage } from '../pages/categoria/categoria';
 import { CategoriaModalPage } from '../pages/categoria-modal/categoria-modal';
 import { ProdutoModalPage } from '../pages/produto-modal/produto-modal';
+import { UsuarioPage } from '../pages/usuario/usuario';
 
 import { CategoriaService } from '../providers/categoria-service';
 import { ProdutoService } from '../providers/produto-service';
+import { UsuarioService } from '../providers/usuario-service';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import { ProdutoService } from '../providers/produto-service';
     CategoriaPage,
     CategoriaModalPage,
     ProdutoModalPage,
+    UsuarioPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{tabsPlacement: 'top'})
@@ -30,12 +34,13 @@ import { ProdutoService } from '../providers/produto-service';
     CategoriaPage,
     CategoriaModalPage,
     ProdutoModalPage,
+    UsuarioPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProdutoService,
     CategoriaService,
-
+    UsuarioService,
   ]
 })
 export class AppModule {}

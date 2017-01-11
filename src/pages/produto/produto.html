@@ -4,6 +4,7 @@
     <ion-item-sliding *ngFor="let p of products">
       <ion-item>
         <span>{{ p.nome }}</span>
+        <p *ngIf="mostrar">{{ p.categoria | json }}</p>
         <span item-right>{{ p.preco | currency:'BRL':true:'1.2-2' }}</span>
         <ion-icon name="ios-arrow-back-outline" item-right></ion-icon>
       </ion-item>
@@ -22,6 +23,12 @@
   <ion-fab right edge>
     <button ion-fab mini color="danger" (click)="insert()">
       <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab bottom right>
+    <button ion-fab mini color="secondary" (click)="mostraNome()">
+      <ion-icon name="search"></ion-icon>
     </button>
   </ion-fab>
 

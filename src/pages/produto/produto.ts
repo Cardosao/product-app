@@ -10,14 +10,19 @@ import { ProdutoModalPage } from '../produto-modal/produto-modal';
 export class ProdutoPage {
 
   public products: Array<any>;
+  public mostrar: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-        private pService: ProdutoService,
-        private alertCrtl: AlertController, private modalCrtl: ModalController) { }
+        private pService: ProdutoService, private modalCrtl: ModalController,
+        private alertCrtl: AlertController) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProdutoPage');
+    console.log('ionViewDidLoad ProdutoPage1');
     this.getAll();
+  }
+
+  public mostraNome() {
+    this.mostrar = !this.mostrar;
   }
 
   public getAll(): void {
@@ -25,7 +30,7 @@ export class ProdutoPage {
       .then((products: Array<any>) => {
         this.products = products;
       }, (error) => {
-        console.log('Erro ao listar produtos', error)
+        console.log('Erro ao listar produtos', error);
       });
   }
 

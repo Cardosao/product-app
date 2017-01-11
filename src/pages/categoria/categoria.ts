@@ -20,13 +20,24 @@ export class CategoriaPage {
     this.getAll();
   }
 
+  // public getAll(): void {
+  //   this.catService.getAll()
+  //     .then((categories: Array<any>) => {
+  //       this.categories = categories;
+  //     }, (error) => {
+  //       console.log('Erro ao listar categorias', error)
+  //     });
+  // }
+
+
   public getAll(): void {
-    this.catService.getAll()
-      .then((categories: Array<any>) => {
+    this.catService.getAll().subscribe(
+      (categories: Array<any>) => {
         this.categories = categories;
       }, (error) => {
         console.log('Erro ao listar categorias', error)
-      });
+      }
+    );
   }
 
   public delete(categoria: any): void {

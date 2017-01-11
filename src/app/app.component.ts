@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import { ProdutoPage } from "../pages/produto/produto";
 import { CategoriaPage } from "../pages/categoria/categoria";
+import { UsuarioPage } from "../pages/usuario/usuario";
 
 
 @Component({
@@ -13,7 +14,7 @@ import { CategoriaPage } from "../pages/categoria/categoria";
 })
 export class MyApp {
   public pages: Array<any>;
-  public rootPage:any = HomePage;
+  public rootPage:any = UsuarioPage;
 
   constructor(public platform: Platform, public menuCtrl: MenuController, public alertCtrl: AlertController) {
     this.initPages();
@@ -21,16 +22,17 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       //this.validExit();
-      StatusBar.styleDefault();
-      Splashscreen.hide();
     });
     // let alertControl = this.alertCtrl;
     // let plat = this.platform;
     this.validExit(this.platform, this.alertCtrl);
   }
-  ionViewDidLoad () {
 
+  ionViewDidLoad () {
+      StatusBar.styleDefault();
+      Splashscreen.hide();
   }
+
 
   ionDissmis () {
 
@@ -40,7 +42,8 @@ export class MyApp {
     this.pages = [
       {title: 'Home', component: HomePage, icon: 'home'},
       {title: 'Produtos', component: ProdutoPage, icon: 'bookmarks'},
-      {title: 'Categorias', component: CategoriaPage, icon: 'pricetags'}
+      {title: 'Categorias', component: CategoriaPage, icon: 'pricetags'},
+      {title: 'Usuarios', component: UsuarioPage, icon: 'contacts'}
     ];
   }
 
